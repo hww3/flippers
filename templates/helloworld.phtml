@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="/static/helloworld.css" />
+    <script type="text/javascript" src="/static/helloworld.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Hello World</h1>
+      <hr noshade="true" />
+      <p>
+	Congratulations on installing the 
+	<a href="http://hww3.riverweb.com/space/pike/Fins">Fins</a> MVC application server.
+      </p>
+      <p>
+	Fins is a modern web application framework written in Pike. Fins uses the MVC design
+	architecture, and thus is similar Ruby on Rails. Like Rails, Fins avoids the tendency
+	to have configuration files that repeat what is already written in code. By having
+	the code be the configuration, mistakes, omissions and duplication of effort are
+	avoided and designer and developer efficiency is maximized.
+      </p>
+      <p>
+	<button type="button" id="button" onclick="toggle();">More information about this request</button>
+	<div id="request" class="hidden"><%$Request%></div>
+      </p>
+      <img src="/static/pike_logo.png" alt="Pike Logo" title="The Pike Logo" />
+    </div>
+  </body>
+</html>

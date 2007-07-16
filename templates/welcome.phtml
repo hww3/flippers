@@ -1,0 +1,32 @@
+<%@include file="top.phtml" %>
+	  <p class="header">
+	    Welcome to Flippers.
+	  </p>
+	  <p>
+	    The application server of the <a href="http://hww3.riverweb.com/space/pike/Fins">Fins project</a>.<br />
+	  </p>
+	  <button id="login_show">Please log in</button>
+	  <table id="login_options">
+	    <tr>
+	      <td>
+		<label for="username">User name</label>
+	      </td>
+	      <td>
+		<input name="username" type="text" size="16" />
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<label for="password">Password</label>
+	      </td>
+	      <td>
+		<input name="password" type="text" size="16" />
+	      </td>
+	    </tr>
+	    <tr>
+	      <td colspan="2">
+		<button id="login_go">log in</button>
+	      </td>
+	    </tr>
+	  </table>
+<%@include file="bottom.phtml" %>

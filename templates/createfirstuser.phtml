@@ -1,0 +1,46 @@
+<%@include file="top.phtml" %>
+	  <p class="header">
+	    Welcome to Flippers.
+	  </p>
+	  <p>
+	    The application server of the <a href="http://hww3.riverweb.com/space/pike/Fins">Fins project</a>.<br />
+	  </p>
+	  <p>
+	    This appears to be the first time you have run Flippers, so we need to create
+	    an admin user.  An admin user has the power to create other users, and
+	    administer the web server.
+	  </p>
+	  <table id="createfirstusertable">
+	    <form method="post" action="/createfirstuser">
+	      <tr>
+		<td>
+		  <label id="username_label" for="username">Name</label>
+		</td>
+		<td>
+		  <input id="username" name="username" type="text" size="16" />
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <label id="password_label" for="password">Password</label>
+		</td>
+		<td>
+		  <input id="password" name="password" type="password" size="16" />
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <label id="confirm_label" for="confirm">Confirm password</label>
+		</td>
+		<td>
+		  <input id="confirm" ame="confirm" type="password" size="16" />
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan="2">
+		  <button id="createfirstuser" type="submit">Create user</button>
+		</td>
+	      </tr>
+	    </form>
+	  </table>
+<%@include file="bottom.phtml" %>

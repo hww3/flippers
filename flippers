@@ -1,0 +1,27 @@
+#!/usr/local/bin/pike 
+
+int main(int argc, array argv) {
+  string cmd_dir = dirname(argv[0]);
+  if (sizeof(cmd_dir) > 0 &&
+      (cmd_dir != ".") &&
+      (cmd_dir != getcwd()))
+    cd(cmd_dir);
+
+  // Look for Fins.
+  if (getenv("FINS_HOME") && 
+      Stdio.exist(getenv("FINS_HOME")) &&
+      Stdio.exist(combine_path(getenv("FINS_HOME"), "lib/Fins.pmod"))
+      ) {
+    add_module_path(combine_path(getenv("FINS_HOME"), "lib/"));
+  }
+  else if (Stdio.exist("../lib/Fins.pmod")) {
+    add_module_path(combine_path(getcwd(), "../lib/"));
+  }
+  else {
+    werror("Error: No FINS_HOME environment variable and my pathetic attempt to search for Fins failed.\n\n");
+    exit(1);
+  }
+  add_module_path(combine_path(getcwd(), "modules/"));
+  program p = compile_string("inherit Flippers.AdminInterface;");
+  return p()->main(argc, argv);
+}

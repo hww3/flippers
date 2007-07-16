@@ -1,0 +1,82 @@
+/* Colours:
+  dark blue = 083b72
+  orange = ff701a
+  green = 2ef76d
+*/
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-stretch: ultra-condensed;
+  background-image: url('/static/images/flippers-logo-background.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+a {
+  color: #ff701a;
+  font-weight: bold;
+}
+body div {
+  height: 100%;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+#box {
+  border: 6px solid #083b72;
+  padding: 1px 1px 1px 1px;
+  min-height: 250px;
+  font-size: 125%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+}
+#imgcontainer {
+  float: left;
+  padding-right: 1px;
+  height: 100%;
+  width: 190px;
+}
+p.header {
+  margin: 1px 1px 1px 1px;
+  padding: 0px 0px 0px 0px;
+  font-size: 150%;
+}
+p:first-letter {
+  margin: 1px 1px 1px 1px;
+  padding: 1px 1px 1px 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 150%;
+  float: left;
+}
+#Fins_250v {
+}
+#login_options {
+  visibility: hidden;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+button {
+  border: 2px solid #083b72;
+  padding: 1px 1px 1px 1px;
+  margin: 1px 1px 1px 1px;
+  background-color: white;
+  color: #ff701a;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-stretch: ultra-condensed;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+input.warning {
+  border: 1px solid red;
+}
+p.warning {
+  color: red;
+}
+input {
+  border: 1px solid #909090;
+}
