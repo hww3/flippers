@@ -1,4 +1,3 @@
-dojo.require("dojo.widget.Spinner");
 dojo.require("dojo.event.*");
 dojo.require("dojo.style");
 dojo.require("dojo.io.*");
@@ -56,7 +55,6 @@ function goCreateUser() {
       var orig = div.innerHTML;
       div.innerHTML = orig + '<p>Creating user and attempting to log in...</p>';
       var bindArgs = {
-	//url : '/createfirstuser?ajax=1',
 	formNode : buildForm( '/createfirstuser', { ajax: 1, username : u, password : p } ),
 	mimetype : 'text/html',
 	sync : false,

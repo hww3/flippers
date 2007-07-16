@@ -11,7 +11,7 @@ int hilfe_mode = 0;
 string project = "Flippers";
 string config_name = "flippers";
 int go_background = 0;
-program server = Protocols.HTTP.Server.SSLPort;
+//program server = Protocols.HTTP.Server.SSLPort;
 
 void print_help() {
   werror("Help: flippers [-p portnum|--port=portnum|--hilfe] [-d]  appname configname\n");

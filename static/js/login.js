@@ -4,25 +4,7 @@ dojo.require("dojo.style");
 dojo.require("dojo.io.*");
 
 function init() {
-  var button = document.getElementById('login_show');
-  button.type = 'button';
-  dojo.event.connect(button, 'onclick', buttonPressed);
-  dojo.style.setVisibility(document.getElementById('login_options'), 0);
-}
-
-function buttonPressed() {
   var table = document.getElementById('login_options');
-  var button = document.getElementById('login_show');
-  button.disabled = true;
-  dojo.style.setOpacity(table, 0);
-  dojo.style.setVisibility(table, 1);
-  var x = dojo.html.getAbsoluteX(button);
-  var y = dojo.html.getAbsoluteY(button);
-  dojo.html.setStyleAttributes(table, 'position : absolute; left : ' + x + 'px; top : ' + y + 'px');
-
-  dojo.lfx.html.fadeOut(button, 750, dojo.lfx.easeInOut, function() {}).play();
-  dojo.lfx.html.fadeIn(table, 750, dojo.lfx.easeInOut, function() {}).play();
-
   var submit = document.getElementById('login_go');
   submit.type = 'button';
   dojo.event.connect(submit, 'onclick', ajaxLogin);
