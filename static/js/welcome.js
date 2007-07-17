@@ -1,5 +1,4 @@
 dojo.require("dojo.event.*");
-dojo.require("dojo.widget.*");
 dojo.require("dojo.style");
 dojo.require("dojo.io.*");
 
@@ -18,7 +17,7 @@ function buttonPressed() {
   dojo.style.setVisibility(table, 1);
   var x = dojo.html.getAbsoluteX(button);
   var y = dojo.html.getAbsoluteY(button);
-  dojo.html.setStyleAttributes(table, 'position : absolute; left : ' + x + 'px; top : ' + y + 'px');
+  dojo.html.setStyleAttributes(table, 'position : absolute; left : ' + x + 'px; top : ' + y + 'px; height: auto;');
 
   dojo.lfx.html.fadeOut(button, 750, dojo.lfx.easeInOut, function() {}).play();
   dojo.lfx.html.fadeIn(table, 750, dojo.lfx.easeInOut, function() {}).play();

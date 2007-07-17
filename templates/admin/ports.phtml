@@ -1,0 +1,48 @@
+<% if sizeof(data["ports"]) %>
+  some ports.
+<% else %>
+  <p>The server is not currently listening on any ports.</p>
+<% endif %>
+<button id="create_port" type="button">Create new port</button>
+<table id="create_port_table">
+  <tr>
+    <td>
+      <label for="address">Listen address (IP address)</label>
+    </td>
+    <td>
+      <input type="text" id="address" name="address" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="port">Listen port</label>
+    </td>
+    <td>
+      <input type="text" id="port" name="port" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="port">Use SSL</label>
+    </td>
+    <td>
+      <input type="checkbox" id="ssl" name="ssl" />
+    </td>
+  </tr>
+  <tr class="ssl_row">
+    <td>
+      <label for="port">SSL Certificate Path</label>
+    </td>
+    <td>
+      <input type="text" id="ssl_cert_path" name="ssl_cert_path" />
+    </td>
+  </tr>
+  <tr class="ssl_row">
+    <td>
+      <label for="port">SSL Key Path</label>
+    </td>
+    <td>
+      <input type="text" id="ssl_key_path" name="ssl_key_path" />
+    </td>
+  </tr>
+</table>

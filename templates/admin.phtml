@@ -2,4 +2,41 @@
 	  <p class="header">
 	    Flippers Admin Interface
 	  </p>
+	  <div id="navbar">
+	  <% if data["user"]["admin"] %>
+	    <button id="ports" type="button">Ports</button>
+	    <button id="applications" type="button">Applications</button>
+	    <button id="users" type="button">Users</button>
+	  <% endif %>
+	    <button id="servers" type="button">Servers</button>
+	    <button id="statistics" type="button">Statistics</button>
+	    <button id="prefs" type="button">Preferences</button>
+	    <button id="logout" type="button">Logout</button>
+	  </div>
+	  <div id="flash_front" class="warning"></div><div id="flash_back" class="warning"></div>
+	  <div id="page_content_front">
+	    <% if data["page"]["lastloaded"] == "ports" %>
+	      <% if data["user"]["admin"] %>
+		<%@include file="admin/ports.phtml" %>
+	      <% endif %>
+	    <% elseif data["page"]["lastloaded"] == "applications" %>
+	      <% if data["user"]["admin"] %>
+		<%@include file="admin/applications.phtml" %>
+	      <% endif %>
+	    <% elseif data["page"]["lastloaded"] == "users" %>
+	      <% if data["user"]["admin"] %>
+		<%@include file="admin/users.phtml" %>
+	      <% endif %>
+	    <% elseif data["page"]["lastloaded"] == "servers" %>
+	      <%@include file="admin/servers.phtml" %>
+	    <% elseif data["page"]["lastloaded"] == "statistics" %>
+	      <%@include file="admin/statistics.phtml" %>
+	    <% elseif data["page"]["lastloaded"] == "prefs" %>
+	      <%@include file="admin/prefs.phtml" %>
+	    <% else %>
+	      <%@include file="admin/welcome.phtml" %>
+	    <% endif %>
+	  </div>
+	  <div id="page_content_back">
+	  </div>
 <%@include file="bottom.phtml" %>

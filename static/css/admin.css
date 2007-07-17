@@ -1,0 +1,54 @@
+#navbar {
+  /* clear: left; */
+  border: 2px solid #083b72;
+  max-width: 99%;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#navbar button {
+  clear: both;
+  border: none;
+  text-decoration: underline;
+}
+p.header {
+  background-image: url('/static/images/Fins_250v.jpg');
+  background-position: 0% 25%;
+  background-repeat: no-repeat;
+  padding-left: 196px;
+}
+div.warning {
+  visibility: hidden;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+#page_content_back {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+}
+#page_content_front {
+  overflow: auto;
+}
+#flash_back {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#create_port_table {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 0px;
+}
+tr.ssl_row {
+  visibility: hidden;
+}
+#box {
+  height: 75%;
+}

@@ -27,4 +27,5 @@ public void load_model() {
     }
   }
   ::load_model();
+  Flippers.Server.start(Flippers.Objects.Port()->find(([])));
 }

@@ -1,5 +1,5 @@
 create table applications (id integer primary key, name varchar(64) not null, path varchar(255) not null);
 create table instances (id integer primary key, name varchar(64) not null, application_id integer not null, config_path varchar(255) not null, port_id integer not null, user_id integer not null);
-create table ports (id integer primary key, address integer not null, port integer not null);
+create table ports (id integer primary key, address integer not null, port integer not null, ssl integer not null, ssl_cert_path varchar(255), ssl_key_path varchar(255));
 create table regexps (id integer primary key, instance_id integer not null, expression varchar(255) not null);
 create table users (id integer primary key, username varchar(16) not null, password varchar(64) not null, admin integer default '0' not null);

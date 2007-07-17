@@ -12,7 +12,9 @@
   <body>
     <div>
       <div id="box">
-	<div id="imgcontainer">
-	  <img id="Fins_250v" src="/static/images/Fins_250v.jpg" />
-	</div>
+	<% if ! data["page"]["nologo"] %>
+	  <div id="imgcontainer">
+	    <img id="Fins_250v" src="/static/images/Fins_250v.jpg" />
+	  </div>
+	<% endif %>
 	<div>
