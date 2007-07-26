@@ -1,11 +1,14 @@
 import Fins;
 inherit Fins.FinsController;
 import Tools.Logging;
+inherit Flippers.Web;
 
 Fins.FinsController admin;
+Fins.FinsController json;
 
 void start() {
   admin = load_controller("admin_controller");
+  json = load_controller("json");
 }
 
 public void index(Request id, Response response, mixed args) {
@@ -111,14 +114,4 @@ public void login(Request id, Response response, mixed args) {
   else {
     response->set_view(v);
   }
-}
-
-static int createAdminUser(string username, string password) { 
-  Log.info("Creating admin user %O\n", username);
-  object newuser = Flippers.Objects.User();
-  newuser["username"] = username;
-  newuser["password"] = Crypto.make_crypt_md5(password);
-  newuser["admin"] = 1;
-  newuser->save();
-  return newuser["id"];
 }

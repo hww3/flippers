@@ -14,8 +14,8 @@ int main(int argc, array argv) {
       ) {
     add_module_path(combine_path(getenv("FINS_HOME"), "lib/"));
   }
-  else if (Stdio.exist("../lib/Fins.pmod")) {
-    add_module_path(combine_path(getcwd(), "../lib/"));
+  else if (Stdio.exist("../Fins/lib/Fins.pmod")) {
+    add_module_path(combine_path(getcwd(), "../Fins/lib/"));
   }
   else {
     werror("Error: No FINS_HOME environment variable and my pathetic attempt to search for Fins failed.\n\n");
