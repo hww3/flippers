@@ -7,12 +7,6 @@ inherit Fins.AdminTools.FinServe;
 import Fins;
 import Tools.Logging;
 
-int hilfe_mode = 0;
-string project = "Flippers";
-string config_name = "flippers";
-int go_background = 0;
-//program server = Protocols.HTTP.Server.SSLPort;
-
 void print_help() {
   werror("Help: flippers [-p portnum|--port=portnum|--hilfe] [-d]  appname configname\n");
 }
@@ -23,6 +17,7 @@ void handle_request(Protocols.HTTP.Server.Request request) {
   return;
 }
 
+/*
 void load_application() {
   Fins.Application application;
 
@@ -36,6 +31,7 @@ void load_application() {
 
   app = application;
 }
+*/
 
 int main(int argc, array argv) {
   // Test for and install Dojo.
@@ -51,5 +47,6 @@ int main(int argc, array argv) {
       cd(oldcwd);
     }
   }
-  return ::main(argc, argv);
+  argv += ({"../Flippers", "-c", "flippers"});
+  return ::main(sizeof(argv), argv);
 }

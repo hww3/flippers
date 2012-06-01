@@ -3,13 +3,6 @@ import Fins.Model;
 inherit Fins.FinsModel;
 import Tools.Logging;
 
-object datatype_instance_module = Flippers.Objects;
-object datatype_definition_module = Flippers.Model;
-object repository = Flippers.Repo;
-
-//void register_types() {
-//}
-
 public void load_model() {
   // FIXME
   // make this work better, if you run Flippers from the wrong path, you're screwed.
@@ -27,5 +20,5 @@ public void load_model() {
     }
   }
   ::load_model();
-  Flippers.Server.start(Flippers.Objects.Port()->find(([])));
+  Flippers.Server.start(Fins.DataSource["_default"]->find->ports(([])));
 }

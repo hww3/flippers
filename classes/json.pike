@@ -1,6 +1,7 @@
 import Fins;
 import Tools.Logging;
-inherit Fins.JSONRPCController;
+//inherit Fins.JSONRPCController;
+inherit Fins.FinsController;
 inherit Flippers.Web;
 
 public void createfirstuser(Request id, Response response, mixed args) {
@@ -9,12 +10,12 @@ public void createfirstuser(Request id, Response response, mixed args) {
   }
   int uid = createAdminUser(id->variables->username, id->variables->password);
   if (uid) {
-    return ([ "user" : Flippers.Objects.User(uid) ]);
+    response->set_data(Tools.JSON.serialize(([ "user" : Flippers.Objects.User(uid) ])));
   }
   else
     response->redirect("/");
 }
 
 public void test(Request id, Response response, mixed args) { 
-  return ([ "a" : 1, "b" : 2, "c" : "d" ]);
+  response->set_data(Tools.JSON.serialize(([ "a" : 1, "b" : 2, "c" : "d" ])));
 }
