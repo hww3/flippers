@@ -1,10 +1,16 @@
 import Fins;
-inherit Fins.FinsController;
 import Tools.Logging;
+inherit Fins.FinsController;
+inherit Fins.RootController;
 inherit Flippers.Web;
 
 Fins.FinsController admin;
 Fins.FinsController json;
+
+protected void create(object application)
+{
+  ::create(application);
+}
 
 void start() {
   admin = load_controller("admin_controller");
