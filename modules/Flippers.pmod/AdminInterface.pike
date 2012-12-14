@@ -11,28 +11,6 @@ void print_help() {
   werror("Help: flippers [-p portnum|--port=portnum|--hilfe] [-d]  appname configname\n");
 }
 
-void handle_request(Protocols.HTTP.Server.Request request) {
-  Log.debug("Flippers Received %O", request);
-  ::handle_request(request);
-  return;
-}
-
-/*
-void load_application() {
-  Fins.Application application;
-
-  application = Fins.Loader.load_app(combine_path(getcwd(), "../", project), config_name);
-
-  if(!application)
-  {
-    Log.critical("No Application!");
-    exit(1);
-  }
-
-  app = application;
-}
-*/
-
 int main(int argc, array argv) {
   // Test for and install Dojo.
   if (!Stdio.exist(combine_path(getcwd(), sprintf("static/js/dojo-%s-kitchen_sink", DOJO_RELEASE)))) {
@@ -47,6 +25,6 @@ int main(int argc, array argv) {
       cd(oldcwd);
     }
   }
-  argv += ({"../Flippers", "-c", "flippers"});
+  argv += ({"-a", ".", "-c", "flippers", "--no-virtual"});
   return ::main(sizeof(argv), argv);
 }

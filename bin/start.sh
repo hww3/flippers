@@ -9,5 +9,5 @@
   fi
 
   cd `dirname $0`/../..
-  echo pike $PIKE_ARGS -x fins start flippers $*
-  exec pike $PIKE_ARGS -x fins start flippers $*
+  echo pike $PIKE_ARGS -x fins start -a flippers $*
+  exec pike $PIKE_ARGS -x fins start -a flippers $*
